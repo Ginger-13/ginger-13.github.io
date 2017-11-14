@@ -1,0 +1,59 @@
+.banners
+  @include clearfix
+  margin-bottom: 45px
+
+.banner
+  height: 250px
+  color: #fff
+  position: relative
+  font-size: $font-max
+  overflow: hidden
+  &:not(div):hover
+    color: #fff
+    .banner__bg
+      transform: scale(1.1, 1.1)
+
+  &:first-child
+    float: left
+    width: calc( (100% / 3 * 2) - 15px)
+    margin-right: 15px
+    .banner__text
+      right: 25px
+      text-align: right
+
+  &:last-child
+    float: right
+    width: calc( (100% / 3) - 15px)
+    margin-left: 15px
+    .banner__text
+      left: 25px
+
+  &__bg
+    @include fill()
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    @include transition(transform)
+
+    &:before
+      content: ""
+      opacity: .80
+      @include fill()
+      background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
+
+  &__text
+    position: absolute
+    bottom: 25px
+    > *
+      display: block
+      text-transform: uppercase
+
+.sale
+  background: $accent
+  position: absolute
+  font-weight: 500
+  padding: 15px 42px
+  top: 9px
+  left: -45px
+  font-size: 18px
+  transform: rotate(-45deg)
