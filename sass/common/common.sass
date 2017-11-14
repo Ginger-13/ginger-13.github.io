@@ -1,5 +1,5 @@
-html, body
-  height: 100%
+/*html, body
+  height: 100%*/
 
 *, *:before, *:after
   box-sizing: border-box
@@ -7,15 +7,9 @@ html, body
 
 body
   color: $text-color
-  background: $light-color
   font-family: 'Roboto', sans-serif
   font-size: $font-size
   font-weight: 300
-  overflow-x: hidden
-  @include transition(background)
-  &.night
-    background: $dark-color
-    color: #fff
 
 a
   color: $accent
@@ -33,17 +27,10 @@ a
     color: $accent
 
 .container
-  max-width: 900px
-  padding: 15px
+  max-width: 1140px
+  padding: 0 15px
   margin: 0 auto
   @include clearfix
-  &.flex
-    display: flex
-    flex-direction: row
-    justify-content: space-between
-    height: 100%
-    padding-top: 100px
-    padding-bottom: 100px
 
 ul
   list-style: none
@@ -79,9 +66,6 @@ button
 
 img
   max-width: 100%
-
-.content
-  margin-bottom: 30px
 
 .text-center
   text-align: center
