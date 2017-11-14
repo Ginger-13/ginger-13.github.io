@@ -1,0 +1,46 @@
+.header
+  padding-top: 45px
+
+  .logo
+    width: 140px
+
+.info
+  float: right
+  padding-top: 35px
+  font-size: 12px
+
+  &__item
+    position: relative
+    text-align: right
+    padding-left: 40px
+
+
+.icon
+  position: absolute
+  top: 0
+  left: 0
+  background-size: cover
+  background-repeat: no-repeat
+
+  &--tel
+    background-image: url($img-dir + "info-icon-01.png")
+    @include square(20px)
+
+  &--marker
+    background-image: url($img-dir + "info-icon-02.png")
+    @include size(15px, 22px)
+
+.phone
+  margin-bottom: 30px
+
+  .link
+    font-size: $font-max
+    display: block
+    font-weight: 500
+    
+  .icon
+    top: 4px
+
+.address
+  padding-left: 25px
+  float: right

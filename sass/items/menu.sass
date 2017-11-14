@@ -1,0 +1,65 @@
+$menu-height: 54px
+
+.menu
+  height: $menu-height
+  position: relative
+
+  &__text
+    color: #fff
+    margin: 8px 0
+    position: relative
+    display: inline-block
+
+  &__container
+    width: 75%
+    position: absolute
+    top: 0
+    left: 0
+    background: $dark-color
+    height: inherit
+    padding-right: 25px
+
+    > ul
+      font-size: 0
+      text-align: right
+
+  &__inner
+    text-align: left
+    padding: 20px 20px
+    position: absolute
+    bottom: 0
+    left: 0
+    transform: translate(0, 100%)
+    background: $accent
+    white-space: nowrap
+    opacity: 0
+    visibility: hidden
+    @include transition(opacity)
+    > a
+      display: block
+      margin-bottom: 5px
+      &:hover
+        color: #fff
+
+  &__item
+    font-size: $font-size
+    display: inline-block
+    position: relative
+    @include transition(background)
+
+    > .link
+      text-transform: uppercase
+      line-height: $menu-height
+      padding: 0 35px
+      &:hover
+        color: inherit
+
+    &.active > .link,
+    &.active.link:hover
+      color: #fff
+
+    &:hover
+      background: $accent
+      .menu__inner
+        opacity: 1
+        visibility: visible
