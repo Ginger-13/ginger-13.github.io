@@ -29,17 +29,11 @@
       left: 25px
 
   &__bg
-    @include fill()
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
     @include transition(transform)
+    @extend .bg--ge--dark
 
     &:before
-      content: ""
       opacity: .80
-      @include fill()
-      background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
 
   &__text
     position: absolute

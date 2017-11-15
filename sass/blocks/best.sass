@@ -17,26 +17,20 @@
     position: relative
     height: 190px
 
-    > *
+    > *:not(.best__item__bg)
       position: relative
 
     &__bg
-      @include fill()
-      background-size: cover
-      background-position: center
-
-      &:before,
-      &:after
-        content: ""
-        @include fill()
-        background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
-        @include transition(opacity)
+      @extend .bg--ge--dark
 
       &:before
+        @include transition(opacity)
         opacity: .6
-        background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
 
       &:after
+        content: ""
+        @include transition(opacity)
+        @extend .bg
         opacity: 0
         background: #000
 

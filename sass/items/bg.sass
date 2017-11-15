@@ -4,7 +4,18 @@
   background-position: center
   background-repeat: no-repeat
 
-  &--ge:before
+.bg--ge
+  @extend .bg
+  &:before
     content: ""
     @include fill()
+
+.bg--ge--dark
+  @extend .bg--ge
+  &:before
     background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
+
+.bg--ge--light
+  @extend .bg--ge
+  &:before
+    background: linear-gradient(to top, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,1) 100%)
