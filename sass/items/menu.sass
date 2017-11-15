@@ -84,9 +84,80 @@ $menu-height: 54px
         visibility: visible
 
 .menu-mobile
+  position: fixed
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 9999
+  background: $dark-color
+  color: #fff
+  padding: 35px 0 25px
+  font-size: 14px
+  display: none
+
+  .container
+    position: relative
+    display: flex
+    flex-direction: column
+    height: 100%
+    justify-content: space-between
+
   &__btn
     border: none
     background: url($svg-dir + "burger.svg") no-repeat
     @include size(25px, 21px)
     padding: 0
     float: left
+    position: relative
+    z-index: 1
+
+    &.close
+      background: url($svg-dir + "close.svg") no-repeat
+      position: absolute
+      top: 0
+      left: 15px
+
+  .logo
+    margin: -10px auto 25px
+    @include size(72px, 42px)
+    display: block
+    .recolor
+      fill: #fff
+    polygon:nth-last-child(3),
+    text
+      fill: $light-color
+
+  &__links
+    display: flex
+    flex-wrap: wrap
+
+    &__title
+      text-transform: uppercase
+      &:not(a)
+        margin-bottom: 20px
+
+    ul
+      padding-left: 10px
+
+    li:not(:last-child)
+      margin-bottom: 15px
+
+    &__item
+      margin-bottom: 30px
+      width: 50%
+
+  &__info
+    padding-left: 20px
+    font-size: $font-small
+
+    a:not(.link)
+      color: $light-color
+
+    .tel
+      font-size: $font-size
+
+    .icon
+      left: -10px
+      path
+        fill: $light-color

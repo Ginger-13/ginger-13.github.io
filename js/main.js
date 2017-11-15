@@ -58,5 +58,13 @@ $('div.footer__links__top').on('click', function() {
     }
 
     $sibling.slideToggle(500);
-    $this.toggleClass('active')
+    $this.toggleClass('active');
+});
+
+$('.menu-mobile__btn').on('click', function() {
+    if ($(this).hasClass('close')) {
+        $('.menu-mobile').slideUp();
+    } else {
+        $('.menu-mobile').slideDown();
+    }
 });
