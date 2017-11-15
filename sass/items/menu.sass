@@ -6,14 +6,22 @@ $menu-height: 54px
   @include desktop
     margin-top: -45px
   @include mobile
-    display: none
+    position: absolute
+    top: 35px
+    width: 100%
 
   &__text
-    color: #fff
-    margin: 8px 0
     position: relative
-    display: inline-block
     cursor: default
+    @include tablet
+      display: inline-block
+      color: #fff
+      margin: 8px 0
+    @include mobile
+      text-align: right
+      font-size: $font-small
+      max-width: 120px
+      margin-left: auto
 
   &__container
     width: 100%
@@ -26,6 +34,8 @@ $menu-height: 54px
     @include desktop
       width: 75%
       max-width: 1160px
+    @include mobile
+      display: none
 
     > ul
       font-size: 0
@@ -72,3 +82,11 @@ $menu-height: 54px
       .menu__inner
         opacity: 1
         visibility: visible
+
+.menu-mobile
+  &__btn
+    border: none
+    background: url($svg-dir + "burger.svg") no-repeat
+    @include size(25px, 21px)
+    padding: 0
+    float: left
