@@ -1,4 +1,7 @@
 .reviews
+  @include mobile
+    overflow: hidden
+
   .container
     position: relative
 
@@ -25,6 +28,8 @@
 
 .review
   padding: 0 15px
+  @include mobile
+    padding-bottom: 55px
 
   &__head
     display: flex
@@ -58,3 +63,7 @@
       font-size: $font-small
       font-weight: 500
       color: $dark-color
+
+  &__text
+    @include mobile
+      font-size: 14px

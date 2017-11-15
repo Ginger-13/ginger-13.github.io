@@ -36,6 +36,7 @@ $('.reviews__wrapper').slick({
     prevArrow: "<a class='arrow--left' href='#'><img src='/img/svg/arrow.svg'></a>",
     nextArrow: "<a class='arrow' href='#'><img src='/img/svg/arrow.svg'></a>",
     slidesToShow: 2,
+    adaptiveHeight: true,
     responsive: [
         {
             breakpoint: 767,
