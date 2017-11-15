@@ -48,3 +48,15 @@ $('.reviews__wrapper').slick({
         }
     ]
 });
+
+$('div.footer__links__top').on('click', function() {
+    var $this = $(this),
+        $sibling = $this.next();
+
+    if ($('body').width > 767) {
+        return;
+    }
+
+    $sibling.slideToggle(500);
+    $this.toggleClass('active')
+});
