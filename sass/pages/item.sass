@@ -27,12 +27,12 @@
 
   tr:nth-child(2n-1)
     background: hsla(hue($dark-color), saturation($dark-color), lightness($dark-color), .5)
-    td
+    td:first-child
       color: #fff
 
   tr:nth-child(2n)
     background: hsla(hue($light-color), saturation($light-color), lightness($light-color), .5)
-    td
+    td:first-child
       color: $dark-color
 
 // end todo
@@ -68,10 +68,28 @@
   &__info
     margin-bottom: 75px
 
+    .row
+      @include desktop_not
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        >div:not(.text)
+          font-size: 14px
+          margin-bottom: 40px
+        > div:nth-child(2)
+          width: 60%
+          display: flex
+          flex-direction: column-reverse
+
+    .text
+      order: 3
+
   .price
     text-align: center
     font-size: $font-max
     padding-top: 20px
+    @include desktop_not
+      padding: 0 0 20px
 
   .container > div:last-child
     text-align: center
