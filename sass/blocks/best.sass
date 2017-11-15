@@ -8,55 +8,86 @@
     top: 25px
 
   &__item
-    display: flex
-    flex-direction: column
-    justify-content: space-between
-    padding: 15px 25px
-    text-align: center
-    color: #fff
     position: relative
     height: 190px
+    @include desktop
+      text-align: center
+      color: #fff
+    @include desktop_not
+      display: flex
+      margin-bottom: 50px
 
-    > *:not(.best__item__bg)
-      position: relative
+      &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        position: relative
+        @include desktop
+          padding: 15px 25px
 
     &__bg
       @extend .bg--ge--dark
+      @include desktop_not
+        position: relative
+        @include size(225px, 190px)
+        flex-shrink: 0
+        margin-right: 15px
+        &:before
+          display: none
 
       &:before
         @include transition(opacity)
         opacity: .6
 
       &:after
-        content: ""
-        @include transition(opacity)
         @extend .bg
-        opacity: 0
-        background: #000
+        @include desktop
+          content: ""
+          @include transition(opacity)
+          opacity: 0
+          background: #000
 
     &__hidden
-      opacity: 0
-      visibility: hidden
-      @include transition(opacity)
+      @include desktop
+        opacity: 0
+        visibility: hidden
+        @include transition(opacity)
 
     .name
       text-transform: uppercase
-      font-size: $font-max
+      font-size: $font-mid
+      @include desktop
+        font-size: $font-max
 
     .price
-      font-size: $font-mid
+      @include desktop
+        font-size: $font-mid
+      @include desktop_not
+        font-size: 0
+        > span
+          white-space: nowrap
+          font-size: $font-size
 
     .properties
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
+      @include desktop
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+      @include desktop_not
+        font-size: $font-small
+        > span
+          display: block
+          margin-bottom: 5px
 
     &:hover
-      color: #fff
-      .best__item__hidden
-        opacity: 1
-        visibility: visible
-      .best__item__bg:before
-        opacity: 0
-      .best__item__bg:after
-        opacity: .6
+      @include desktop_not
+        color: $text-color
+      @include desktop
+        color: #fff
+        .best__item__hidden
+          opacity: 1
+          visibility: visible
+        .best__item__bg:before
+          opacity: 0
+        .best__item__bg:after
+          opacity: .6

@@ -27,8 +27,9 @@ gulp.task('serve', ['css'], function() {
 
     gulp.watch('./sass/*.sass', ['css']);
     gulp.watch('./sass/**/*.sass', ['css']);
-    gulp.watch('./html/*.sass', ['svg']);
+    gulp.watch('./html/*.html', ['svg']);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
+    gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
 var injectSvgOptions = { base: './' };

@@ -14,10 +14,14 @@
     @include align(false)
 
     &:not(.arrow--left)
-      right: 45px
+      right: 15px
+      @include desktop
+        right: 45px
     &--left
-      transform: scale(-1,1) translate(-50%,0)
-      left: 45px
+      transform: scale(-1,1) translate(0, -50%)
+      left: 15px
+      @include desktop
+        left: 45px
 
 .review
   padding: 0 15px
@@ -42,10 +46,13 @@
     display: flex
     flex-direction: column
     justify-content: space-between
+    font-size: 14px
 
     .name
-      font-size: $font-mid
       font-weight: 500
+      font-size: $font-size
+      @include desktop
+        font-size: $font-mid
 
     .date
       font-size: $font-small

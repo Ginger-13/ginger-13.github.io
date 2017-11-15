@@ -17,8 +17,9 @@
       display: block
       padding-left: 25px
       line-height: 50px
-      font-size: $font-mid
       @include transition(background)
+      @include desktop
+        font-size: $font-mid
 
       &:hover
         background: darken($decoration-color, 5%)
@@ -31,7 +32,9 @@
   .row
     margin: 0
     flex-grow: 1
-    padding-right: 70px
+    padding-right: 50px
+    @include desktop
+      padding-right: 70px
 
   &__item
     position: relative
@@ -59,8 +62,11 @@
       left: 0
       right: 0
       z-index: 1
-      font-size: $font-mid
+      @include desktop
+        font-size: $font-mid
 
   .arrow
     @include align(false)
-    right: -70px
+    right: -50px
+    @include desktop
+      right: -70px

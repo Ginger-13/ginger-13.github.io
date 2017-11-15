@@ -1,11 +1,25 @@
+@include desktop_not
+  .map
+    padding: 0 15%
+    margin: 0 auto
+    background: $dark-color
+
 .footer
   color: #fff
   background: $text-color
   padding: 35px 0 40px
+  @include desktop_not
+    padding: 50px 0 55px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
 
   &__info
-    float: right
     text-align: right
+    @include desktop_not
+      align-self: center
+      flex-basis: 35%
 
   .logo
     width: 172px
@@ -17,17 +31,38 @@
   &__phones
     margin: 0 0 20px
     font-size: $font-max
+    @include desktop_not
+      font-size: $font-mid
     > a
       display: block
 
+  &__address
+    @include desktop_not
+      font-size: 14px
+
   &__links
+    padding-top: 25px
+    flex-grow: 1
+    display: flex
+
+    > div
+      margin-right: 70px
+      @include desktop_not
+        margin: 0 60px 40px 0
+        &:nth-child(2)
+          order: 3
+          margin: 0
+
     &__top
       text-transform: uppercase
       display: block
       margin: 0 0 25px
       font-size: $font-max
+      max-width: 130px
       &:not(a)
         cursor: default
+      &:last-child
+        margin-bottom: 0
 
     ul > li
       margin: 0 0 5px
@@ -38,7 +73,8 @@
   color: #fff
   line-height: 70px
   font-size: $font-max
-
+  @include desktop_not
+    font-size: $font-mid
 
 .social
   float: right

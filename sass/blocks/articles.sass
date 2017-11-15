@@ -7,6 +7,9 @@
     height: 215px
     max-width: 825px
     width: 70%
+    @include desktop_not
+      width: 65%
+      max-width: 500px
 
     &__bg
       @extend .bg
@@ -22,8 +25,15 @@
       bottom: 25px
       font-size: $font-max
       cursor: default
+      @include desktop_not
+        width: 75%
+        padding-right: 30px
 
   .markered
     padding-top: 11px
+    @include desktop_not
+      font-size: 14px
+      padding-top: 10px
+
     > li:hover:before
       border-color: $accent
