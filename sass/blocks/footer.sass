@@ -7,17 +7,22 @@
 .footer
   color: #fff
   background: $text-color
-  padding: 35px 0 40px
-  @include desktop_not
+  @include desktop
+    padding: 35px 0 40px
+  @include tablet_onl
     padding: 50px 0 55px
+  @include mobile
+    padding-bottom: 45px
 
   &__wrapper
-    display: flex
-    justify-content: space-between
+    @include tablet
+      display: flex
+      justify-content: space-between
 
   &__info
-    text-align: right
-    @include desktop_not
+    @include tablet
+      text-align: right
+    @include tablet_onl
       align-self: center
       flex-basis: 35%
 
@@ -27,11 +32,14 @@
     display: inline-block
     .recolor
       fill: #fff
+    @include mobile
+      display: none
 
   &__phones
     margin: 0 0 20px
-    font-size: $font-max
-    @include desktop_not
+    @include desktop
+      font-size: $font-max
+    @include tablet_onl
       font-size: $font-mid
     > a
       display: block
@@ -41,31 +49,66 @@
       font-size: 14px
 
   &__links
-    padding-top: 25px
     flex-grow: 1
     display: flex
+    @include tablet
+      padding-top: 25px
+    @include mobile
+      flex-direction: column
+      margin-bottom: 40px
 
     > div
-      margin-right: 70px
-      @include desktop_not
+      @include desktop
+        margin-right: 70px
+      @include tablet_onl
         margin: 0 60px 40px 0
+      @include desktop_not
         &:nth-child(2)
           order: 3
           margin: 0
+      @include mobile
+        border: 1px solid #5c5c5c
+        border-top: none
+        margin: 0 -15px
+        &:nth-child(2)
+          border: none
+        .footer__links__top:not(div)
+          border: 1px solid #5c5c5c
+          border-top: none
+          margin: 0 -15px
 
     &__top
       text-transform: uppercase
       display: block
-      margin: 0 0 25px
       font-size: $font-max
-      max-width: 130px
+      @include tablet
+        margin: 0 0 25px
+        max-width: 130px
       &:not(a)
         cursor: default
       &:last-child
         margin-bottom: 0
 
+      @include mobile
+        line-height: 60px
+        padding: 0 15px
+        position: relative
+
+        &:not(a):after
+          content: ""
+          background: url($svg-dir + "arrow-white.svg") no-repeat
+          @include size(18px, 28px)
+          position: absolute
+          right: 28px
+          top: 50%
+          transform: translate(0, -50%) rotate(90deg)
+
     ul > li
       margin: 0 0 5px
+
+    ul
+      @include mobile
+        padding: 0 15px 20px
 
 
 .footer__bottom
@@ -77,15 +120,22 @@
     font-size: $font-mid
 
 .social
-  float: right
   font-size: 0
   line-height: 0
-  padding-top: 15px
+  @include tablet
+    padding-top: 15px
+    float: right
+  @include mobile
+    margin-left: -10px
+    padding-top: 20px
 
   &__item
-    margin-left: 10px
     box-sizing: content-box
     padding: 10px
+    @include tablet
+      margin-left: 10px
+    @include mobile
+      margin-right: 10px
     > img
       @include square(inherit)
 
