@@ -1,5 +1,5 @@
 .opps
-  padding: 75px
+  padding: 75px 0
 
   &__wrapper
     display: flex
@@ -12,14 +12,25 @@
     text-align: center
     border: 0 solid $dark-color
     border-right-width: 1px
-
-    &:nth-child(3n)
-      border-right-width: 0
-
-    &:nth-child(1),
-    &:nth-child(2),
-    &:nth-child(3)
+    @include mobile
+      width: 50%
+      font-size: 14px
       border-bottom-width: 1px
+
+    @include tablet
+      &:nth-child(3n)
+        border-right-width: 0
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3)
+        border-bottom-width: 1px
+
+    @include mobile
+      &:nth-child(2n)
+        border-right-width: 0
+      &:last-child,
+      &:nth-last-child(2)
+        border-bottom-width: 0
 
     &__text
       display: block
