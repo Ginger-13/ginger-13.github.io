@@ -1,0 +1,57 @@
+.opps
+  padding: 75px
+
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+  &__item
+    width: 33.3333%
+    padding: 25px 0
+    text-align: center
+    border: 0 solid $dark-color
+    border-right-width: 1px
+
+    &:nth-child(3n)
+      border-right-width: 0
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3)
+      border-bottom-width: 1px
+
+    &__text
+      display: block
+
+  &__icon
+    display: inline-block
+    background-image: url($img-dir + "opps.png")
+    background-repeat: no-repeat
+    margin-bottom: 20px
+
+    &--years
+      @include size(84px, 81px)
+      background-position: -10px -115px
+      margin-bottom: 24px
+
+    &--prices
+      @include size(72px, 85px)
+      background-position: -10px -216px
+
+    &--builders
+      @include size(84px, 85px)
+      background-position: -10px -10px
+
+    &--client
+      @include size(84px, 85px)
+      background-position: -114px -10px
+
+    &--document
+      @include size(84px, 85px)
+      background-position: -218px -10px
+
+    &--home
+      @include size(84px, 66px)
+      background-position: -114px -115px
+      margin-bottom: 39px
