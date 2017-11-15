@@ -3,7 +3,8 @@ $menu-height: 54px
 .menu
   height: $menu-height
   position: relative
-  margin-top: -45px
+  @include desktop
+    margin-top: -45px
 
   &__text
     color: #fff
@@ -13,14 +14,16 @@ $menu-height: 54px
     cursor: default
 
   &__container
-    width: 75%
-    max-width: 1160px
+    width: 100%
     position: absolute
     top: 0
     left: 0
     background: $dark-color
     height: inherit
     padding-right: 25px
+    @include desktop
+      width: 75%
+      max-width: 1160px
 
     > ul
       font-size: 0

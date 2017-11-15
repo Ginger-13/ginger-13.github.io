@@ -1,6 +1,9 @@
 .header
-  padding-top: 45px
-  margin-bottom: 65px
+  padding-top: 35px
+  margin-bottom: 55px
+  @include desktop
+    padding-top: 45px
+    margin-bottom: 65px
 
   .logo
     width: 140px
@@ -8,14 +11,19 @@
 .info
   float: right
   padding-top: 35px
-  font-size: 12px
+  font-size: $font-small
   position: relative
   z-index: 1
 
   &__item
     position: relative
     text-align: right
-    padding-left: 40px
+    padding-left: 30px
+    @include desktop
+      padding-left: 40px
+    @include desktop_not
+      float: right
+      margin-left: 40px
 
 
 .icon
@@ -47,3 +55,5 @@
   float: right
   a:hover path
     fill: darken($accent, 20%)
+  @include desktop_not
+    text-align: left
