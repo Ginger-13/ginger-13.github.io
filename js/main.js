@@ -12,12 +12,12 @@ $('a[href="#"]').on('click', function() {
 
 $('.pickup__carousel').slick({
     prevArrow: "",
-    nextArrow: "<a class='arrow' href='#'></a>",
+    nextArrow: "<a class='arrow' href='#'><img src='/img/svg/arrow.svg'></a>",
     slidesToShow: 3
 });
 
 $('.reviews__wrapper').slick({
-    prevArrow: "<a class='arrow arrow--left' href='#'></a>",
-    nextArrow: "<a class='arrow' href='#'></a>",
+    prevArrow: "<a class='arrow arrow--left' href='#'><img src='/img/svg/arrow.svg'></a>",
+    nextArrow: "<a class='arrow' href='#'><img src='/img/svg/arrow.svg'></a>",
     slidesToShow: 2
 });

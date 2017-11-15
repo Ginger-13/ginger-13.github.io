@@ -36,3 +36,26 @@
   color: #fff
   line-height: 70px
   font-size: $font-max
+
+
+.social
+  float: right
+  font-size: 0
+  line-height: 0
+  padding-top: 15px
+
+  &__item
+    margin-left: 10px
+    box-sizing: content-box
+    padding: 10px
+    > img
+      @include square(inherit)
+
+    &.inst
+      @include square(20px)
+    &.facebook
+      @include size(11px, 20px)
+    &.vk
+      @include size(35px, 20px)
+    &.twitter
+      @include size(26px, 20px)
