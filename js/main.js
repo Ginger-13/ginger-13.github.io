@@ -49,6 +49,28 @@ $('.reviews__wrapper').slick({
     ]
 });
 
+$('.gallery__carousel').slick({
+    prevArrow: "<a class='arrow--left' href='#'><img src='/img/svg/arrow.svg'></a>",
+    nextArrow: "<a class='arrow' href='#'><img src='/img/svg/arrow.svg'></a>",
+    slidesToShow: 4,
+    responsive: [
+        {
+            breakpoint: 1139,
+            settings: {
+                slidesToShow: 3
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+                dots: true,
+                arrows: false
+            }
+        }
+    ]
+});
+
 $('div.footer__links__top').on('click', function() {
     var $this = $(this),
         $sibling = $this.next();
@@ -68,3 +90,5 @@ $('.menu-mobile__btn').on('click', function() {
         $('.menu-mobile').slideDown();
     }
 });
+
+//gallery__carousel

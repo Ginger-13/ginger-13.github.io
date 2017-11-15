@@ -1,0 +1,77 @@
+// todo
+
+.breadcrumbs
+  font-size: 14px
+
+  > li
+    display: inline-block
+
+    &:not(:last-child):after
+      content: ">"
+      padding: 0 2px 0 6px
+
+    &:last-child
+      color: $dark-color
+      a
+        pointer-events: none
+
+.table
+  width: 100%
+
+  td
+    height: 40px
+    padding: 0 15px
+    &:last-child
+      text-align: right
+      padding-left: 0
+
+  tr:nth-child(2n-1)
+    background: hsla(hue($dark-color), saturation($dark-color), lightness($dark-color), .5)
+    td
+      color: #fff
+
+  tr:nth-child(2n)
+    background: hsla(hue($light-color), saturation($light-color), lightness($light-color), .5)
+    td
+      color: $dark-color
+
+// end todo
+
+.gallery
+  position: relative
+  margin-bottom: 100px
+
+  .slick-slider,
+  .row > div
+    position: static
+
+  &__item
+    margin: 0 15px
+    height: 260px
+    position: relative
+    > div
+      @extend .bg
+
+  .arrow
+    @include align(false)
+
+    &--left
+      left: 0
+      transform: translate(0,-50%) scale(-1,1)
+
+    &:not(.arrow--left)
+      right: 0
+
+.item-page
+  padding-bottom: 140px
+
+  &__info
+    margin-bottom: 75px
+
+  .price
+    text-align: center
+    font-size: $font-max
+    padding-top: 20px
+
+  .container > div:last-child
+    text-align: center
