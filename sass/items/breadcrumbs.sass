@@ -1,0 +1,14 @@
+.breadcrumbs
+  font-size: 14px
+
+  > li
+    display: inline-block
+
+    &:not(:last-child):after
+      content: ">"
+      padding: 0 2px 0 6px
+
+    &:last-child
+      color: $dark-color
+      a
+        pointer-events: none

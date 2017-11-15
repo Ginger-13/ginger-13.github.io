@@ -1,0 +1,19 @@
+.table
+  width: 100%
+
+  td
+    height: 40px
+    padding: 0 15px
+    &:last-child
+      text-align: right
+      padding-left: 0
+
+  tr:nth-child(2n-1)
+    background: hsla(hue($dark-color), saturation($dark-color), lightness($dark-color), .5)
+    td:first-child
+      color: #fff
+
+  tr:nth-child(2n)
+    background: hsla(hue($light-color), saturation($light-color), lightness($light-color), .5)
+    td:first-child
+      color: $dark-color
