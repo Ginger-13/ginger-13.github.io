@@ -111,6 +111,8 @@ $menu-height: 54px
     float: left
     position: relative
     z-index: 1
+    @include tablet
+      display: none
 
     &.close
       background: url($svg-dir + "close.svg") no-repeat
