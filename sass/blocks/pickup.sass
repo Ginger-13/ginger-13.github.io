@@ -1,0 +1,68 @@
+.pickup
+  &__wrapper
+    display: flex
+    position: relative
+
+  .title
+    padding-left: 25px
+
+  &__filter
+    flex-basis: 250px
+    background: $decoration-color
+    margin-right: 15px
+
+    &__item
+      display: block
+      padding-left: 25px
+      line-height: 50px
+      font-size: $font-mid
+      @include transition(background)
+
+      &:hover
+        background: darken($decoration-color, 5%)
+        color: inherit
+
+      &.active
+        background: $dark-color
+        pointer-events: none
+
+  .row
+    margin: 0
+    flex-grow: 1
+    padding-right: 70px // todo
+
+  &__item
+    position: relative
+    text-align: center
+    overflow: hidden
+
+    &__pic
+      display: block
+      height: 190px
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      position: relative
+      margin-bottom: 31px // todo
+
+      &:before
+        content: ""
+        @include fill()
+        background: linear-gradient(to top, hsla(0,100%,100%,0) 0%, hsla(0,100%,100%,1) 100%)
+        opacity: .8
+        @include transition(opacity)
+
+      &:hover:before
+        opacity: 1
+
+    span
+      position: absolute
+      top: 15px
+      left: 0
+      right: 0
+      z-index: 1
+      font-size: $font-mid
+
+  .arrow
+    @include align(false)
+    right: 0
