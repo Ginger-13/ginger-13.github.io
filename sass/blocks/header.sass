@@ -4,9 +4,13 @@
   @include desktop
     padding-top: 45px
     margin-bottom: 65px
+  @include mobile
+    margin-bottom: 40px
 
   .logo
     width: 140px
+    @include mobile
+      width: 40%
 
 .info
   float: right
@@ -14,6 +18,8 @@
   font-size: $font-small
   position: relative
   z-index: 1
+  @include mobile
+    display: none
 
   &__item
     position: relative

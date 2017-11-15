@@ -1,39 +1,54 @@
 .banners
   @include clearfix
-  margin-bottom: 45px
+  font-size: 0
+  @include tablet
+    margin-bottom: 45px
 
 div.banner .banner__text
   cursor: default
 
 .banner
-  height: 250px
   color: #fff
   position: relative
   font-size: $font-max
   overflow: hidden
-  &:not(div):hover
-    color: #fff
-    .banner__bg
-      transform: scale(1.1, 1.1)
+  @include tablet
+    height: 250px
+    &:not(div):hover
+      color: #fff
+      .banner__bg
+        transform: scale(1.1, 1.1)
 
   &:first-child
-    float: left
-    width: calc( (100% / 12 * 7) - 15px)
-    margin-right: 15px
+    @include tablet
+      float: left
+      width: calc( (100% / 12 * 7) - 15px)
+      margin-right: 15px
     @include desktop
       width: calc( (100% / 3 * 2) - 15px)
+    @include mobile
+      height: 170px
     .banner__text
       right: 25px
       text-align: right
 
   &:last-child
-    float: right
-    width: calc( (100% / 12 * 5) - 15px)
-    margin-left: 15px
+    @include tablet
+      float: right
+      width: calc( (100% / 12 * 5) - 15px)
+      margin-left: 15px
+      .banner__text
+        left: 25px
     @include desktop
       width: calc( (100% / 3) - 15px)
-    .banner__text
-      left: 25px
+    @include mobile
+      height: 85px
+      width: 100%
+      font-size: $font-size
+      .banner__text
+        right: 25px
+        bottom: 10px
+        text-align: right
 
   &__bg
     @include transition(transform)
@@ -58,3 +73,8 @@ div.banner .banner__text
   left: -45px
   font-size: 18px
   transform: rotate(-45deg)
+  @include mobile
+    font-size: 14px
+    padding: 5px 42px
+    top: 11px
+    left: -47px

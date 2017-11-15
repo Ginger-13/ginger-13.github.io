@@ -92,7 +92,9 @@
   @media (max-width: #{$screen-sm - 1}) // xs  ....... small
     @content
 
-
+.sm-hide
+  @include mobile
+    display: none
 
 
 //@mixin mobile_ls
