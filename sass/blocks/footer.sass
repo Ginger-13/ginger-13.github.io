@@ -11,6 +11,8 @@
     width: 172px
     margin: 0 0 35px
     display: inline-block
+    .recolor
+      fill: #fff
 
   &__phones
     margin: 0 0 20px
@@ -50,6 +52,21 @@
     padding: 10px
     > img
       @include square(inherit)
+
+    &.inst,
+    &.twitter
+      path
+        @include transition(fill)
+      &:hover path
+        fill: $accent
+
+    &.facebook,
+    &.vk
+      path
+        @include transition(stroke)
+      &:hover path
+        stroke: $accent
+
 
     &.inst
       @include square(20px)

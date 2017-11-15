@@ -28,6 +28,8 @@
 
   &--map
     @include size(15px, 22px)
+    path
+      @include transition(fill)
 
 .phone
   margin-bottom: 30px
@@ -43,3 +45,5 @@
 .address
   padding-left: 25px
   float: right
+  a:hover path
+    fill: darken($accent, 20%)

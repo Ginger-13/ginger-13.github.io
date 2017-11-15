@@ -27,20 +27,3 @@
     padding-top: 11px
     > li:hover:before
       border-color: $accent
-
-
-// todo
-
-.markered
-  > li
-    margin-bottom: 10px
-    padding-left: 20px
-    position: relative
-
-    &:before
-      content: ""
-      @include square(5px)
-      border: 1px solid $dark-color
-      @include align(false)
-      left: 0
-      @include transition(border)

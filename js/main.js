@@ -17,7 +17,7 @@ $('.pickup__carousel').slick({
 });
 
 $('.reviews__wrapper').slick({
-    prevArrow: "<a class='arrow arrow--left' href='#'><img src='/img/svg/arrow.svg'></a>",
+    prevArrow: "<a class='arrow--left' href='#'><img src='/img/svg/arrow.svg'></a>",
     nextArrow: "<a class='arrow' href='#'><img src='/img/svg/arrow.svg'></a>",
     slidesToShow: 2
 });
