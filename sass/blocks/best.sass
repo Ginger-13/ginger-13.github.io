@@ -1,0 +1,68 @@
+.best
+  .container
+    position: relative
+
+  &__all
+    position: absolute
+    right: 15px
+    top: 25px
+
+  &__item
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 15px 25px
+    text-align: center
+    color: #fff
+    position: relative
+    height: 190px
+
+    > *
+      position: relative
+
+    &__bg
+      @include fill()
+      background-size: cover
+      background-position: center
+
+      &:before,
+      &:after
+        content: ""
+        @include fill()
+        background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
+        @include transition(opacity)
+
+      &:before
+        opacity: .6
+        background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)
+
+      &:after
+        opacity: 0
+        background: #000
+
+    &__hidden
+      opacity: 0
+      visibility: hidden
+      @include transition(opacity)
+
+    .name
+      text-transform: uppercase
+      font-size: $font-max
+
+    .price
+      font-size: $font-mid
+
+    .properties
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+    &:hover
+      color: #fff
+      .best__item__hidden
+        opacity: 1
+        visibility: visible
+      .best__item__bg:before
+        opacity: 0
+      .best__item__bg:after
+        opacity: .6
