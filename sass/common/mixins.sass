@@ -84,6 +84,10 @@
   @media (min-width: #{$screen-md}) // md + lg+ ....... huge_scr
     @content
 
+@mixin tablet_onl
+  @media (min-width: #{$screen-md}) and (max-width: #{$screen-lg - 1}) // md ....... tablet
+    @content
+
 @mixin mobile
   @media (max-width: #{$screen-md - 1}) // xs + sm ....... mobile
     @content
