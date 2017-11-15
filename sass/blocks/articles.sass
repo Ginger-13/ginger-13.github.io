@@ -1,15 +1,23 @@
 .articles
   position: relative
+  @include mobile
+    padding-top: 0
 
   &__header
-    position: absolute
-    left: 0
-    height: 215px
-    max-width: 825px
-    width: 70%
-    @include desktop_not
+    @include tablet
+      height: 215px
+      position: absolute
+      left: 0
+    @include desktop
+      max-width: 825px
+      width: 70%
+    @include tablet_onl
       width: 65%
       max-width: 500px
+    @include mobile
+      position: relative
+      height: 165px
+      margin-bottom: 60px
 
     &__bg
       @extend .bg
@@ -33,7 +41,11 @@
     padding-top: 11px
     @include desktop_not
       font-size: 14px
+    @include tablet_onl
       padding-top: 10px
+    @include mobile
+      > li:not(:last-child)
+        margin-bottom: 20px
 
     > li:hover:before
       border-color: $accent
