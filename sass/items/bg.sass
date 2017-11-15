@@ -1,0 +1,10 @@
+.bg
+  @include fill
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  &--ge:before
+    content: ""
+    @include fill()
+    background: linear-gradient(to bottom, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,1) 100%)

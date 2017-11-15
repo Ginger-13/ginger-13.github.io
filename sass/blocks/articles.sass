@@ -1,0 +1,42 @@
+.articles
+  position: relative
+
+  &__header
+    position: absolute
+    left: 0
+    height: 215px
+    max-width: 825px
+    width: 70%
+
+    &__title
+      position: absolute
+      line-height: 50px
+      color: #fff
+      width: 50%
+      background: $accent
+      padding-right: 50px
+      text-align: right
+      bottom: 25px
+      font-size: $font-max
+
+  .markered
+    padding-top: 11px
+    > li:hover:before
+      border-color: $accent
+
+
+// todo
+
+.markered
+  > li
+    margin-bottom: 10px
+    padding-left: 20px
+    position: relative
+
+    &:before
+      content: ""
+      @include square(5px)
+      border: 1px solid $dark-color
+      @include align(false)
+      left: 0
+      @include transition(border)
