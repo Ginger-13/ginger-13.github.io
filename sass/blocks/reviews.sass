@@ -2,7 +2,12 @@
   .container
     position: relative
 
-  .row > div
+  &__wrapper
+    margin: 0 -15px
+
+  .row > div,
+  .slick-list,
+  .slick-slider
     position: static
 
   .arrow
@@ -15,6 +20,7 @@
       left: 0
 
 .review
+  padding: 0 15px
 
   &__head
     display: flex

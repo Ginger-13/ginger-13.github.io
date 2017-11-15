@@ -1,13 +1,15 @@
 .pickup
   &__wrapper
-    display: flex
+    //display: flex
     position: relative
 
   .title
     padding-left: 25px
 
   &__filter
-    flex-basis: 250px
+    //flex-basis: 250px
+    width: 250px
+    float: left
     background: $decoration-color
     margin-right: 15px
 
@@ -35,6 +37,7 @@
     position: relative
     text-align: center
     overflow: hidden
+    padding: 0 15px
 
     &__pic
       display: block
@@ -60,4 +63,4 @@
 
   .arrow
     @include align(false)
-    right: 0
+    right: -70px
