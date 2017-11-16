@@ -21,10 +21,16 @@
     text-transform: uppercase
 
   &__item
+    @include mobile
+      margin-bottom: 30px
+
     &__title
       text-align: center
       text-transform: uppercase
       margin-bottom: 35px
+      @include mobile
+        margin-bottom: 15px
+        text-align: left
 
   .inputs
     @include clearfix
@@ -54,6 +60,11 @@
   &__more
     padding: 45px 0 0
     display: none
+    @include mobile
+      padding-top: 10px
+      .filter__item__title
+        margin-bottom: 20px
+        text-align: center
 
     .filter__item li
       position: relative
@@ -82,9 +93,31 @@
       float: left
       width: calc(50% - 8px)
 
+    .filter__item:nth-child(2) ul,
+    .filter__item:nth-child(3) ul
+      @include tablet_onl
+        li
+          display: inline-block
+
+    .filter__item:last-child
+      @include tablet_onl
+        float: right
+
   &__bottom
     padding-top: 45px
-    text-align: center
-    font-size: $font-mid
+    @include tablet
+      font-size: $font-mid
+      text-align: center
     a.link
       margin-right: 20px
+    @include mobile
+      @include clearfix
+      padding-top: 30px
+
+      a.link
+        float: left
+        line-height: 29px
+      .btn
+        float: right
+        padding-left: 20px
+        padding-right: 20px
