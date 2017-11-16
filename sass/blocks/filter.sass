@@ -51,6 +51,7 @@
   input[type="checkbox"] + label
     padding: 3px 8px
     display: inline-block
+    cursor: pointer
 
   input[type="radio"]:checked + label,
   input[type="checkbox"]:checked + label
@@ -108,8 +109,12 @@
     @include tablet
       font-size: $font-mid
       text-align: center
+
     a.link
       margin-right: 20px
+      &:hover
+        color: #fff
+
     @include mobile
       @include clearfix
       padding-top: 30px
