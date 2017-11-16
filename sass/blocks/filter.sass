@@ -1,0 +1,90 @@
+.input
+  background: none
+  border: 1px solid $decoration-color
+  height: 30px
+  padding: 0 15px
+  @include placeholder($light-color)
+  @include transition()
+  color: inherit
+  font: inherit
+  &:hover
+    border-color: #fff
+  &:focus
+    background: hsla(0, 100%, 100%, .3)
+    border: 2px solid #fff
+
+.filter
+  background: $dark-color
+  padding: 35px 0
+
+  .title
+    text-transform: uppercase
+
+  &__item
+    &__title
+      text-align: center
+      text-transform: uppercase
+      margin-bottom: 35px
+
+  .inputs
+    @include clearfix
+    text-align: center
+    margin: 0 -8px
+
+    .input
+      float: left
+      margin: 0 8px
+      width: calc(50% - 16px)
+      text-align: inherit
+
+  input[type="radio"],
+  input[type="checkbox"]
+    display: none
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label
+    padding: 3px 8px
+    display: inline-block
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label
+    background: $text-color
+    color: #fff
+
+  &__more
+    padding: 45px 0 0
+    display: none
+
+    .filter__item li
+      position: relative
+
+    .filter__item > div:last-child
+      @include clearfix
+      li
+        min-height: 32px
+        margin-bottom: 20px
+
+    .filter__item.spec
+      font-size: $font-mid
+      ul
+        float: left
+        &:nth-child(n+1)
+          width: 40px
+          margin-left: 15px
+        &:first-child
+          width: calc(100% - 140px)
+          margin-left: 0
+
+      label
+        padding: 5px 10px
+
+    .filter__item:not(.spec) ul
+      float: left
+      width: calc(50% - 8px)
+
+  &__bottom
+    padding-top: 45px
+    text-align: center
+    font-size: $font-mid
+    a.link
+      margin-right: 20px

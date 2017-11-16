@@ -91,4 +91,16 @@ $('.menu-mobile__btn').on('click', function() {
     }
 });
 
-//gallery__carousel
+$('.js-filter').on('click', function() {
+    var $this = $(this),
+        $block = $('.filter__more');
+
+    $block.slideToggle(500);
+    $this.toggleClass('active');
+
+    if ($this.hasClass('active')) {
+        $this.text('- скрыть');
+    } else {
+        $this.text('+ больше опций');
+    }
+});

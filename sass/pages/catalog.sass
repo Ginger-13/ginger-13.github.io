@@ -1,0 +1,49 @@
+.catalog
+  padding: 75px 0 150px
+
+  .selection
+    text-align: right
+    margin-bottom: 75px
+
+    select
+      border: 2px solid $dark-color
+      background: none
+      font: inherit
+      text-transform: uppercase
+      padding: 10px 15px
+
+  &__item
+    margin-bottom: 100px
+    text-align: center
+
+    &__pic
+      margin-bottom: 20px
+      position: relative
+      overflow: hidden
+      height: 255px
+      img
+        @include align()
+        height: 100%
+        max-width: none
+
+    &__name
+      font-size: $font-max
+      margin-bottom: 20px
+
+    &__props
+      padding: 0 20px 20px
+      font-size: 0
+      text-align: left
+      span
+        display: inline-block
+        width: 50%
+        font-size: $font-mid
+        padding-bottom: 10px
+        &:nth-child(2n-1):last-child
+          width: 100%
+        &:nth-child(2):last-child
+          width: 100%
+
+    &__price
+      margin-bottom: 20px
+      font-size: $font-mid

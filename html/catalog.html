@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&amp;subset=cyrillic" rel="stylesheet">
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная — Arkom</title>
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <button class="menu-mobile__btn" type="button"></button>
+
+        <a class="logo" href="index.html">
+            <img src="/img/svg/logo.svg">
+        </a>
+
+        <div class="info">
+            <div class="info__item phone">
+                <a class="link" href="tel:80555555555">
+                    <img class="icon icon--tel" src="/img/svg/tel.svg">
+                    (17) 666-66-66
+                </a>
+                <a href="#">позвоните мне</a>
+            </div>
+            <div class="info__item address">
+                <a href="#">
+                    <img class="icon icon--map" src="/img/svg/map.svg">
+                    г. Минск<br>пр. Независимости, 125
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="menu__container">
+            <ul>
+                <li class="menu__item menu__item--exp">
+                    <a class="link" href="#">дома</a>
+                    <div class="menu__inner">
+                        <a href="#" class="link"><strong>все</strong></a>
+                        <a href="#" class="link">одноэтажные</a>
+                        <a href="#" class="link">двухэтажные</a>
+                        <a href="#" class="link">дешёвые</a>
+                        <a href="#" class="link">узкие</a>
+                        <a href="#" class="link">с гаражом</a>
+                        <a href="#" class="link">с бассейном</a>
+                    </div>
+                </li>
+                <li class="menu__item menu__item--exp">
+                    <a class="link" href="#">услуги</a>
+                    <div class="menu__inner">
+                        <a href="#" class="link">проектирование</a>
+                        <a href="#" class="link">монолитные работы</a>
+                        <a href="#" class="link">строительство фундамента</a>
+                        <a href="#" class="link">фасадные работы</a>
+                        <a href="#" class="link">индивидуальные проеты</a>
+                    </div>
+                </li>
+                <li class="menu__item">
+                    <a class="link" href="#">сотрудничество</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="menu__text">проекты домов<br>строительство домов под ключ</div>
+        </div>
+    </div>
+</div>
+
+<div class="menu-mobile">
+    <div class="container">
+        <button class="menu-mobile__btn close" type="button"></button>
+
+        <a class="logo">
+            <img src="/img/svg/logo.svg">
+        </a>
+
+        <div class="menu-mobile__links">
+            <div class="menu-mobile__links__item">
+                <div class="menu-mobile__links__title">дома</div>
+                <ul>
+                    <li><a href="#" class="link"><strong>все</strong></a></li>
+                    <li><a href="#" class="link">одноэтажные</a></li>
+                    <li><a href="#" class="link">двухэтажные</a></li>
+                    <li><a href="#" class="link">дешёвые</a></li>
+                    <li><a href="#" class="link">узкие</a></li>
+                    <li><a href="#" class="link">с гаражом</a></li>
+                    <li><a href="#" class="link">с бассейном</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-mobile__links__item">
+                <div class="menu-mobile__links__title">услуги</div>
+                <ul>
+                    <li><a href="#" class="link">проектирование</a></li>
+                    <li><a href="#" class="link">монолитные работы</a></li>
+                    <li><a href="#" class="link">строительство фундамента</a></li>
+                    <li><a href="#" class="link">фасадные работы</a></li>
+                    <li><a href="#" class="link">индивидуальные проеты</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-mobile__links__item">
+                <a class="menu-mobile__links__title link" href="#">сотрудничество</a>
+            </div>
+        </div>
+
+        <div class="menu-mobile__info">
+            <div class="row">
+                <div class="col-xs-6">
+                    <a class="link with-icon tel" href="tel:80555555555">
+                        <img class="icon icon--tel" src="/img/svg/tel.svg">
+                        (17) 666-66-66
+                    </a>
+                    <a href="#">позвоните мне</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="with-icon" href="#">
+                        <img class="icon icon--map" src="/img/svg/map.svg">
+                        г. Минск<br>пр. Независимости, 125
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <ul class="breadcrumbs">
+        <li><a class="link" href="#">главная</a></li>
+        <li><a class="link" href="#">дома</a></li>
+        <li class="active"><a class="link" href="#">одноэтажные дома</a></li>
+    </ul>
+
+    <h1 class="page-title">Каталог готовых домов</h1>
+</div>
+
+<div class="filter">
+    <div class="container">
+        <h2 class="title">фильтр</h2>
+
+        <div class="row">
+            <div class="filter__item col-md-3">
+                <div class="filter__item__title">площадь застройки</div>
+                <div class="inputs">
+                    <input class="input" type="text" placeholder="0">
+                    <input class="input" type="text" placeholder="999">
+                </div>
+            </div>
+            <div class="filter__item col-md-3">
+                <div class="filter__item__title">Количество комнат</div>
+                <div class="inputs">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                </div>
+            </div>
+            <div class="filter__item col-md-3">
+                <div class="filter__item__title">Количество этажей</div>
+                <div class="inputs">
+                    <input class="input" type="text" placeholder="1">
+                    <input class="input" type="text" placeholder="3">
+                </div>
+            </div>
+            <div class="filter__item col-md-3">
+                <div class="filter__item__title">Цена строительства</div>
+                <div class="inputs">
+                    <input class="input" type="text">
+                    <input class="input" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="filter__more">
+            <div class="row">
+                <div class="filter__item spec col-md-3">
+                    <div class="filter__item__title">Доп. опции</div>
+
+                    <div>
+                        <ul>
+                            <li><span>гараж</span></li>
+                            <li><span>мансарда</span></li>
+                            <li><span>терраса</span></li>
+                            <li><span>бассейн</span></li>
+                            <li><span>подвал</span></li>
+                            <li><span>баня/сауна</span></li>
+                            <li><span>узкий</span></li>
+                        </ul>
+
+                        <ul>
+                            <li><input type="radio" name="garage" id="garage" checked><label for="garage">да</label></li>
+                            <li><input type="radio" name="mans" id="mans"><label for="mans">да</label></li>
+                            <li><input type="radio" name="terr" id="terr"><label for="terr">да</label></li>
+                            <li><input type="radio" name="pool" id="pool"><label for="pool">да</label></li>
+                            <li><input type="radio" name="basemnt" id="basemnt"><label for="basemnt">да</label></li>
+                            <li><input type="radio" name="sauna" id="sauna"><label for="sauna">да</label></li>
+                            <li><input type="radio" name="narrow" id="narrow"><label for="narrow">да</label></li>
+                        </ul>
+
+                        <ul>
+                            <li><input type="radio" name="garage" id="garageN"><label for="garageN">нет</label></li>
+                            <li><input type="radio" name="mans" id="mansN"><label for="mansN">нет</label></li>
+                            <li><input type="radio" name="terr" id="terrN"><label for="terrN">нет</label></li>
+                            <li><input type="radio" name="pool" id="poolN"><label for="poolN">нет</label></li>
+                            <li><input type="radio" name="basemnt" id="basemntN"><label for="basemntN">нет</label></li>
+                            <li><input type="radio" name="sauna" id="saunaN"><label for="saunaN">нет</label></li>
+                            <li><input type="radio" name="narrow" id="narrowN"><label for="narrowN">нет</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter__item col-md-3">
+                    <div class="filter__item__title">Стиль дома</div>
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" id="bungalo"><label for="bungalo">бунгало</label></li>
+                            <li><input type="checkbox" id="shale"><label for="shale">шале</label></li>
+                            <li><input type="checkbox" id="classic"><label for="classic">классический</label></li>
+                            <li><input type="checkbox" id="balt"><label for="balt">прибалтийский</label></li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" id="hitech"><label for="hitech">hi-tech</label></li>
+                            <li><input type="checkbox" id="fahverch"><label for="fahverch">фахверк</label></li>
+                            <li><input type="checkbox" id="modern"><label for="modern">модерн</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter__item col-md-3">
+                    <div class="filter__item__title">Материал стен</div>
+
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" id="material1"><label for="material1">блочные</label></li>
+                            <li><input type="checkbox" id="material2"><label for="material2">камень</label></li>
+                            <li><input type="checkbox" id="material3"><label for="material3">кирпич</label></li>
+                            <li><input type="checkbox" id="material4"><label for="material4">СИП-панели</label></li>
+                            <li><input type="checkbox" id="material5"><label for="material5">дерево</label></li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" id="material6"><label for="material6">из бревен</label></li>
+                            <li><input type="checkbox" id="material7"><label for="material7">из бруса</label></li>
+                            <li><input type="checkbox" id="material8"><label for="material8">газосиликатные блоки</label></li>
+                            <li><input type="checkbox" id="material9"><label for="material9">пеноблоки</label></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filter__item col-md-3">
+                    <div class="filter__item__title">Тип кровли</div>
+
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" id="roof1"><label for="roof1">плоская</label></li>
+                            <li><input type="checkbox" id="roof2"><label for="roof2">двухскатная</label></li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" id="roof3"><label for="roof3">четырехскатная</label></li>
+                            <li><input type="checkbox" id="roof4"><label for="roof4">односкатная</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter__bottom">
+            <a class="link js-filter" href="#">+ больше опций</a>
+            <button class="btn" type="submit">подобрать</button>
+        </div>
+    </div>
+</div>
+
+<div class="catalog-page">
+    <div class="container">
+        <div class="catalog">
+            <div class="selection">
+                <select>
+                    <option>цена up</option>
+                    <option>цена up</option>
+                    <option>цена up</option>
+                    <option>цена up</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-1.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-2.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-3.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-4.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-1.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-2.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-3.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-4.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-1.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-2.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-3.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+
+                <div class="catalog__item col-lg-3 col-md-4 col-xs-12">
+                    <div class="catalog__item__pic"><img src="/img/temp/top-4.jpg"></div>
+                    <div class="catalog__item__name">Д31862</div>
+                    <div class="catalog__item__props">
+                        <span>+ баня</span>
+                        <span>+ бассейн</span>
+                        <span>+ гараж</span>
+                        <span>+ бассейн</span>
+                    </div>
+                    <div class="catalog__item__price">7 800 BYN / 3 900 $</div>
+                    <div>
+                        <a class="btn" href="#">посмотреть</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pager">
+                <ul>
+                    <li><a class="link" href="#"></a></li>
+                    <li><a class="link" href="#">1</a></li>
+                    <li><a class="link" href="#">2</a></li>
+                    <li class="active"><a class="link" href="#">3</a></li>
+                    <li><a class="link" href="#">4</a></li>
+                    <li><a class="link" href="#">5</a></li>
+                    <li><a class="link" href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab7b1825846f73b20eddcf18a29df28b5fc91759b2b46d0741e6c5cea421edcf8&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=false"></script>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__links">
+                <div>
+                    <div class="footer__links__top">услуги</div>
+                    <ul>
+                        <li><a class="link" href="#">проектирование</a></li>
+                        <li><a class="link" href="#">монолитные работы</a></li>
+                        <li><a class="link" href="#">строительство фундамента</a></li>
+                        <li><a class="link" href="#">фасадные работы</a></li>
+                        <li><a class="link" href="#">индивидуальные проекты</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <a class="footer__links__top link" href="#">советы по&nbsp;стройке</a>
+                    <a class="footer__links__top link" href="#">цены</a>
+                </div>
+
+                <div>
+                    <div class="footer__links__top">о нас</div>
+                    <ul>
+                        <li><a class="link" href="#">сертификаты</a></li>
+                        <li><a class="link" href="#">отзывы</a></li>
+                        <li><a class="link" href="#">политика качества</a></li>
+                        <li><a class="link" href="#">техническая компетенция</a></li>
+                        <li><a class="link" href="#">сотрудничество</a></li>
+                        <li><a class="link" href="#">наши преимущества</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__info">
+                <img class="logo" src="/img/svg/logo.svg">
+
+                <div class="footer__phones">
+                    <a class="link" href="tel:80176666666">(17) 666-66-66</a>
+                    <a class="link" href="tel:80296666666">(29) 666-66-66</a>
+                </div>
+
+                <div class="footer__address">
+                    Республика Беларусь, г. Минск,<br>пр. Независимости 125-147
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer__bottom">
+    <div class="container">
+        <div class="social">
+            <a class="social__item inst" href="#"><img src="/img/svg/inst.svg"></a>
+            <a class="social__item facebook" href="#"><img src="/img/svg/facebook.svg"></a>
+            <a class="social__item vk" href="#"><img src="/img/svg/vk.svg"></a>
+            <a class="social__item twitter" href="#"><img src="/img/svg/twitter.svg"></a>
+        </div>
+
+        © 2017 All Rights Reserved
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

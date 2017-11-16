@@ -1,0 +1,38 @@
+.pager
+  text-align: center
+  height: 36px
+  line-height: 36px
+
+  ul
+    display: inline-block
+
+  li
+    float: left
+    font-size: $font-size
+    margin: 0 15px
+
+    a
+      padding: 0 10px
+
+    &:first-child,
+    &:last-child
+      font-size: 0
+      line-height: 0
+
+    &:first-child a,
+    &:last-child a
+      background: url($svg-dir + "arrow.svg") center no-repeat
+      @include size(16px, 30px)
+      @include transition(opacity)
+      &:hover
+        opacity: .8
+
+    &:first-child a
+      transform: scale(-1, 1)
+
+    &.active a
+      pointer-events: none
+      border: 2px solid $dark-color
+      font-size: $font-max
+      @include square(36px)
+      border-radius: 50%
